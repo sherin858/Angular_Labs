@@ -1,0 +1,24 @@
+<div>
+  Student Data
+  <div>
+    <label for="std.id"></label>
+    <input type="number" [value]="std.Id" (keyup)="changeId($event.target)" />
+    <div>Id:{{ std.Id }}</div>
+  </div>
+  <div>
+    <div>
+      <label for="std.name"></label>
+      <input
+        type="text"
+        [value]="std.Name"
+        (keyup)="changeName($event.target)"
+      />
+    </div>
+    <div>Name:{{ std.Name }}</div>
+  </div>
+  <div>
+    <label for="std.name"></label>
+    <input type="number" [value]="std.Age" (keyup)="changeAge($event.target)" />
+  </div>
+  <div>Age:{{ std.Age }}</div>
+</div>

@@ -1,0 +1,15 @@
+<form>
+  <fieldset>
+    <label for="Id">ID:</label>
+    <input type="text" name="Id" [(ngModel)]="dept.id" />
+  </fieldset>
+  <fieldset>
+    <label for="Name">Name:</label>
+    <input type="text" name="Name" [(ngModel)]="dept.name" />
+  </fieldset>
+  <fieldset>
+    <label for="Location">Location:</label>
+    <input type="text" name="Location" [(ngModel)]="dept.location" />
+  </fieldset>
+  <button (click)="addDepartment()">Add</button>
+</form>

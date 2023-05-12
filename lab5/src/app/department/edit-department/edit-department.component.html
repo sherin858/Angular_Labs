@@ -1,0 +1,11 @@
+<form *ngIf="dept != null">
+  <fieldset>
+    <label for="Name">Name:</label>
+    <input type="text" name="Name" [(ngModel)]="dept.name" />
+  </fieldset>
+  <fieldset>
+    <label for="Location">Location:</label>
+    <input type="text" name="Location" [(ngModel)]="dept.location" />
+  </fieldset>
+  <button (click)="edit()">Edit</button>
+</form>

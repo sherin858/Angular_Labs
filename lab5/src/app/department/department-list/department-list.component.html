@@ -1,0 +1,42 @@
+<!-- <app-add-department (newDept)="addDept($event)"></app-add-department> -->
+<a routerLink="/departments/add">Add Department</a>
+<div class="table-responsive">
+  <table class="table table-primary">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Location</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="" *ngFor="let item of departments">
+        <td scope="row">{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.location }}</td>
+        <td>
+          <!-- (click)="showDetails(item.id)" -->
+          <button [routerLink]="['/departments', 'details', item.id]">
+            Details
+          </button>
+          <!-- (click)="sendEditDepartment(item.id)" -->
+          <button [routerLink]="['/departments', 'edit', item.id]">Edit</button>
+          <button (click)="removeDept(item.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- <app-department-details
+    [deptDetails]="deptDetails"
+    *ngIf="detailsFlag"
+    (hideOutput)="hideDetails()"
+  ></app-department-details> -->
+  <!-- <app-department-details></app-department-details>
+</div>
+<app-edit-department
+  [dept]="deptToEdit"
+  (editDept)="editDept($event)"
+></app-edit-department> -->
+</div>
+<!-- <router-outlet></router-outlet> -->
